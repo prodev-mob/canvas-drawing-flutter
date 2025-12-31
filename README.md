@@ -17,8 +17,8 @@ Ensure you have the following dependencies added to your `pubspec.yaml` file:
 dependencies:
   flutter:
     sdk: flutter
-  path_provider: ^2.0.15  # For saving images
-  share_plus: ^7.0.2  # For sharing images
+  path_provider: ^2.1.5  # For saving images
+  share_plus: ^12.0.1  # For sharing images
 ```
 
 ## Installation & Usage

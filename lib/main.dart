@@ -56,7 +56,14 @@ class _DrawingScreenState extends State<DrawingScreen> {
       final imageFile = File(imagePath);
       await imageFile.writeAsBytes(pngBytes);
 
-      await Share.shareXFiles([XFile(imagePath)], text: 'Check out my drawing!');
+      final result = await SharePlus.instance.share(
+        ShareParams(
+          text: 'Check out my drawing!',
+          files: [XFile(imagePath)],
+        ),
+      );
+
+      print("Shared: ${result.status}, raw: ${result.raw}");
     } catch (e) {
       print("Error sharing drawing: $e");
     }
